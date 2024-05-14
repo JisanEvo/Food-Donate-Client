@@ -21,8 +21,9 @@ const AddFood = () => {
         const email = user.email;
         const donar=form.donateP.value
         const dname=form.donarName.value
+        const status=form.status.value
 
-        const newDonate = { photo, name, location, quantity, date, notes, email,donar,dname }
+        const newDonate = { photo, name, location, quantity, date, notes, email,donar,dname,status }
 
         fetch("http://localhost:5000/addFood", {
             method: "POST",
