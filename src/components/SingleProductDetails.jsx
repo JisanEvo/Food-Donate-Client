@@ -42,23 +42,7 @@ const SingleProductDetails = () => {
 
 
                 </div>
-                {/* <div className="mt-4 w-full text-center">
-                    <h1 className="text-2xl text-center">Donar Information :</h1>
-                    <div className="flex items-center justify-center w-full">
-
-                        <div className="flex w-full items-center">
-                            <div className="w-full border border-2">
-
-                                <div className="items-center justify-center">
-                                <img className="object-cover " src={fod.donar} alt="" />
-                                </div>
-                                <p className="mx-2 font-semibold text-gray-700 dark:text-gray-200" tabIndex="0" role="link">Donar Name: {fod.dname}</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div> */}
+         
  <div className="mt-4 w-full text-center">
     <h1 className="text-2xl text-center">Donor Information:</h1>
     <div className="flex items-center justify-center w-full"> {/* Added justify-center to center the content horizontally */}
