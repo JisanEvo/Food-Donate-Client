@@ -120,7 +120,7 @@ const Navbar = () => {
 
 
                     {
-                        user ? <div title={user?.displayName}  className="dropdown dropdown-end" >
+                        user ? <div title={user?.displayName}  className="dropdown dropdown-end z-40"  >
                             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
                                     <img src={user?.photoURL||"https://i.postimg.cc/QNkbjGzf/images.png" } alt={user.displayName} />
