@@ -19,6 +19,7 @@ const CardShow = ({ item }) => {
                         <span className="text-xs font-medium text-blue-600 uppercase dark:text-blue-400">{item.name}</span>
                         <a href="#" className="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline" tabIndex="0" role="link">I Built A Successful Blog In One Year</a>
                         <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{item.foodStatus}</p>
+                        <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{item.quantity}</p>
                     </div>
 
                     <div className="mt-4">
