@@ -37,11 +37,11 @@ const CardShow = ({ item }) => {
                                 <img className="object-cover h-10 rounded-full" src={item.donar} alt="" />
                                 <a href="#" className="mx-2 font-semibold text-gray-700 dark:text-gray-200" tabIndex="0" role="link">{item.dname}</a>
                             </div>
-                          
+
                         </div>
                         <div className="mt-4 text-center">
                             <Link to={`/singleFood/${item._id}`} >
-                                <button className="btn btn-outline bg-red-400 text-white">Details</button>
+                                <button className="btn btn-info text-white">Details</button>
                             </Link>
                         </div>
                     </div>

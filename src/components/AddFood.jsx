@@ -59,7 +59,7 @@ const AddFood = () => {
                 <form onSubmit={handleAddDonate}>
 
                     <div className="flex mb-8">
-                        <div className="w-1/2 ">
+                        <div className="ml-4 w-1/2 ">
                             <h4>Food  Name: </h4>
                             <input type="text" name="name" placeholder="Food Name " className="input input-bordered w-full" />
                         </div>

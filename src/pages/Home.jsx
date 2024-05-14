@@ -2,6 +2,8 @@
 import { useLoaderData } from "react-router-dom";
 import Carousel from "../components/Carousel";
 import Featured from "../components/Featured";
+import Faq from "../components/Faq";
+import Donar from "../components/Donar";
 
 
 const Home = () => {
@@ -11,7 +13,8 @@ console.log(data)
         <div>
             <Carousel></Carousel>
             <Featured data={data}></Featured>
- <h1>This is Home.</h1>
+           <Faq></Faq>
+           <Donar></Donar>
         </div>
     );
 };
