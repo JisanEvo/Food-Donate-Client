@@ -25,8 +25,8 @@ const AvailableFood = () => {
     return (
         <div>
 
-                <div className="flex">
-                    <div className="flex justify-center w-full">
+                <div className="lg:flex ">
+                    <div className="lg:flex justify-center w-full">
                         <form action="" onSubmit={handleSearch}>
                             <input type="text" name="search" placeholder="Search Here " className="input input-bordered"   />
                             <button className="btn btn-info">Search</button>

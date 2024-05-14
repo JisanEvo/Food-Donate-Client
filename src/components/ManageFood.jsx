@@ -55,7 +55,7 @@ const ManageFood = () => {
 
     return (
         <div>
-            <h1>Show all products I have added</h1>
+       
             <div className="flex flex-col mt-6">
                 <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
@@ -66,11 +66,13 @@ const ManageFood = () => {
                                         <th scope="col" className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                             Food Info
                                         </th>
-                                        <th scope="col" className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                        <th scope="col" className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400  hidden  sm:block">
                                             Donator
                                         </th>
                                         <th scope="col" className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                                            Email address
+                                          <div className=" hidden  sm:block">
+                                          Email address
+                                          </div>
                                         </th>
                                         <th scope="col" className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                             Edit
@@ -89,7 +91,7 @@ const ManageFood = () => {
                                                         <div className="flex items-center gap-x-2">
                                                             <img className="object-cover w-40 h-40 rounded-3xl	 " src=
                                                                 {item.photo} alt="" />
-                                                            <div>
+                                                            <div className=" hidden  sm:block">
                                                                 <h2 className="text-base  text-gray-800 dark:text-white ">{item.name}</h2>
                                                                 <p className="text-sm font-normal text-gray-600 dark:text-gray-400">Quantity: {item.quantity}</p>
                                                             </div>
@@ -103,14 +105,16 @@ const ManageFood = () => {
 
                                                 <td className="px-4 py-4 text-sm whitespace-nowrap">
                                                     <div className="flex items-center gap-x-2">
-                                                        <p className="font-medium text-lg">{user.displayName}</p>
+                                                        <p className="font-medium text-lg  hidden  sm:block">{user.displayName}</p>
 
                                                     </div>
                                                 </td>
                                                 {/* Render donator */}
                                             </td>
-                                            <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-                                                {user.email}
+                                            <td className=" px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+                                             <div className=" hidden  sm:block">
+                                             {user.email}
+                                             </div>
                                             </td>
                                             <td className="px-4 py-4 text-sm whitespace-nowrap">
                                                 {/* Render edit options */}

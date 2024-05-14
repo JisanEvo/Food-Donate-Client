@@ -16,16 +16,17 @@ const AvailableCard = ({ fd }) => {
 
                     <div className="p-6">
                         <div>
-                            <span className="text-xs font-medium text-blue-600 uppercase dark:text-blue-400">{fd.name}</span>
-                            <div href="#" className="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 " tabIndex="0" >I Built A Successful Blog In One Year</div>
+                            
+                            <div className="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 " tabIndex="0" >{fd.name}</div>
                             <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{fd.foodStatus}</p>
                             <div className="flex justify-between">
-                            <h2>Quantity:  {fd.quantity}</h2>
-                            <h2 className="flex"><TfiLocationPin /> {fd.location}</h2>
+                            <h2><span  className="font-bold text-[16px]">Quantity</span> {fd.quantity}</h2>
+                            <h2 className="flex font-bold"><TfiLocationPin className="font-bold text-xl text-sky-600"/> {fd.location}</h2>
                         </div>
                         <div className="">
-                            <h2 className="flex"><BsCalendar2DateFill /> {fd.date}</h2>
-                            <h2>Note: {fd.notes}</h2>
+                            <h2 className="flex py-4"><BsCalendar2DateFill  className="mr-4 "/> {fd.date}</h2>
+                            <h2 title=
+                            {fd.notes} ><span className="font-bold text-[16px]">Note</span>:{fd.notes.substring(0,80)}....</h2>
                         </div>
                         </div>
 
