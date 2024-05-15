@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import { AuthContext } from "../../provider/AuthProvider"
 import Swal from "sweetalert2"
 
@@ -7,17 +7,20 @@ const Login = () => {
     const navigate = useNavigate()
     const { signIn,
         signInWithGoogle } = useContext(AuthContext);
+ const location=useLocation()
+ const form=location.state
 
+//  console.log(form)
     const handleGoogleSign = async () => {
         try {
             await signInWithGoogle();
             Swal.fire({
                 icon: "success",
                 title: "Great",
-                text: "Google Log in Sucessfull",
+                text: " Log in Sucessfull",
 
             });
-            navigate('/')
+            navigate(form)
         }
         catch (err) {
             Swal.fire({

@@ -6,7 +6,8 @@ import Swal from "sweetalert2";
 const Registration = () => {
 
     const navigate = useNavigate();
-    const { createUser, user, setUser, updateUserProfile } = useContext(AuthContext)
+    const { createUser, user, setUser, updateUserProfile } = useContext(AuthContext);
+
     const handleSignUp = async e => {
         e.preventDefault()
         const form = e.target;
@@ -17,7 +18,7 @@ const Registration = () => {
         // console.log(name, pass, photo, email)
         try {
             const result = await createUser(email, pass)
-            console.log(result)
+            // console.log(result)
 
             await updateUserProfile(name, photo)
             setUser({ ...user, PhotoUrl: photo, displayName: name })

@@ -9,6 +9,9 @@ import ManageFood from "../components/ManageFood";
 import SingleProductDetails from "../components/SingleProductDetails";
 import UpdateFood from "../components/UpdateFood";
 import ErrorPage from "../components/ErrorPage";
+import RequestPage from "../components/RequestPage";
+import MyReq from "../components/MyReq";
+import PrivateRoute from "./PrivateRoute";
 
 const router=createBrowserRouter([
     {
@@ -32,26 +35,49 @@ const router=createBrowserRouter([
             },
             {
                 path:'/availableFood',
-                element:<AvailableFood></AvailableFood>,
+                element:
+
+<AvailableFood></AvailableFood>,
+
                 loader:()=>fetch(`http://localhost:5000/food`),
             },
             {
                 path:'/addFood',
-                element:<AddFood></AddFood>
+                element:<PrivateRoute>
+                    <AddFood></AddFood>
+                </PrivateRoute>
             },
             {
                 path:'/manageFood',
-                element:<ManageFood></ManageFood>
+                element:<PrivateRoute>
+                    <ManageFood></ManageFood>
+                </PrivateRoute>
             },
             {
                 path:'/singleFood/:id',
-                element:<SingleProductDetails></SingleProductDetails>
+                element:<PrivateRoute>
+                    <SingleProductDetails></SingleProductDetails>
+                </PrivateRoute>
             },
             {
                 path:'/updateFood/:id',
                 element:<UpdateFood></UpdateFood>,
                 loader:({params})=>fetch(`http://localhost:5000/updateFood/${params.id}`)
-            }
+            },
+            {
+                path:'/requestPage/:id',
+                element:  <RequestPage></RequestPage> ,
+                loader:({params})=>fetch(`http://localhost:5000/updateFood/${params.id}`)
+
+            },
+            {
+                path:'/req',
+                element:<PrivateRoute>
+                    <MyReq></MyReq>
+                </PrivateRoute>
+
+            },
+
         ]
     }
 ])

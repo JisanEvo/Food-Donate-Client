@@ -84,7 +84,7 @@ const AddFood = () => {
                     <div className="flex mb-8">
                         <div className="  ml-4  w-1/2">
                             <h4>Expire Date </h4>
-                            <input type="text" name="date" placeholder="Expire Date" className="input input-bordered w-full" />
+                            <input type="date" name="date" placeholder="Expire Date" className="input input-bordered w-full" />
                         </div>
                         <div className=" ml-4 w-1/2">
                             <h4>Additional Notes:</h4>

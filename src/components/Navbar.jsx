@@ -14,7 +14,7 @@ const Navbar = () => {
 
         <li><NavLink to="/manageFood">Manage My Food</NavLink></li>
         {/* <li><NavLink to='/updateProduct/:id'>Update</NavLink></li> */}
-        <li><NavLink to='/myRequest'>My Food Request</NavLink></li>
+        <li><NavLink to='/req'>My Food Request</NavLink></li>
 
 
     </>
