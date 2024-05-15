@@ -58,7 +58,7 @@ const RequestPage = () => {
 
               });
 
-              history.push("/home");
+          history.push("/home");
 
         }
        else{
