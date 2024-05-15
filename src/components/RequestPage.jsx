@@ -26,10 +26,10 @@ const RequestPage = () => {
 
 
     const handleUpdate = event => {
-        // const {user}=UseAuth()
+
 
         event.preventDefault();
-        // console.log(`form submit are added `)
+       
 
         const form = event.target;
         const name = form.name.value;
@@ -58,7 +58,7 @@ const RequestPage = () => {
 
               });
 
-          history.push("/home");
+
 
         }
        else{
