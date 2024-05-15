@@ -26,14 +26,14 @@ const UpdateFood = () => {
 
         const updateDonate = { photo, name, location, quantity, date, notes, email, donar, dname }
 
-        fetch(`http://localhost:5000/updateFood/${update._id}`, {
+        fetch(`https://food-donate-server-two.vercel.app/updateFood/${update._id}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(updateDonate)
         })
             .then(res => res.json())
             .then(data => {
-                if (data.modifiedCount>0) {
+                if (data.modifiedCount > 0) {
                     Swal.fire({
                         icon: "success",
                         title: "Great",
@@ -62,12 +62,12 @@ const UpdateFood = () => {
                     <div className="flex mb-8">
                         <div className="ml-4 w-1/2 ">
                             <h4>Food  Name: </h4>
-                            <input type="text" name="name" placeholder="Food Name " className="input input-bordered w-full" defaultValue={update.name}/>
+                            <input type="text" name="name" placeholder="Food Name " className="input input-bordered w-full" defaultValue={update.name} />
                         </div>
                         <div className=" ml-4  w-1/2">
 
                             <h4>Food Photo:</h4>
-                            <input type="text" name="photo" placeholder="Food Photo " className="input input-bordered w-full" defaultValue={update.photo}/>
+                            <input type="text" name="photo" placeholder="Food Photo " className="input input-bordered w-full" defaultValue={update.photo} />
                         </div>
 
                     </div>
@@ -85,32 +85,32 @@ const UpdateFood = () => {
                     <div className="flex mb-8">
                         <div className="  ml-4  w-1/2">
                             <h4>Expire Date </h4>
-                            <input type="date" name="date" placeholder="Expire Date" className="input input-bordered w-full" defaultValue={update.date}/>
+                            <input type="date" name="date" placeholder="Expire Date" className="input input-bordered w-full" defaultValue={update.date} />
                         </div>
                         <div className=" ml-4 w-1/2">
                             <h4>Additional Notes:</h4>
-                            <input type="text" name="notes" placeholder="Additional Notes" className="input input-bordered w-full" defaultValue={update.notes}/>
+                            <input type="text" name="notes" placeholder="Additional Notes" className="input input-bordered w-full" defaultValue={update.notes} />
                         </div>
                     </div>
                     <div className="flex mb-8">
                         <div className="  ml-4  w-1/2">
                             <h4>Donator Profile</h4>
-                            <input type="text" name="donateP" placeholder="Donator Profile " defaultValue={user?.photoURL} className="input input-bordered w-full"  />
+                            <input type="text" name="donateP" placeholder="Donator Profile " defaultValue={user?.photoURL} className="input input-bordered w-full" />
                         </div>
                         <div className=" ml-4 w-1/2">
                             <h4> User Name:</h4>
-                            <input type="text" name="donarName" placeholder="User Name" defaultValue={user?.displayName} className="input input-bordered w-full"  />
+                            <input type="text" name="donarName" placeholder="User Name" defaultValue={user?.displayName} className="input input-bordered w-full" />
                         </div>
                     </div>
 
                     <div className="flex mb-8">
                         <div className="  ml-4  w-1/2">
                             <h4>User Email:</h4>
-                            <input type="text" name="email" placeholder="User Email" className="input input-bordered w-full" defaultValue={user?.email}  />
+                            <input type="text" name="email" placeholder="User Email" className="input input-bordered w-full" defaultValue={user?.email} />
                         </div>
                         <div className="  ml-4  w-1/2">
                             <h4>Food Status:</h4>
-                            <input type="text" name="status" placeholder="Available " className="input input-bordered w-full" defaultValue={"Available"}  />
+                            <input type="text" name="status" placeholder="Available " className="input input-bordered w-full" defaultValue={"Available"} />
                         </div>
                     </div>
 

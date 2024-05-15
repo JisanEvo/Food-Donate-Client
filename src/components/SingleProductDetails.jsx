@@ -10,7 +10,7 @@ const SingleProductDetails = () => {
     const [isOpen, setIsOpen] = useState(false); // State for modal visibility
     const { user } = useContext(AuthContext)
     useEffect(() => {
-        fetch(`http://localhost:5000/singleFood/${id}`)
+        fetch(`https://food-donate-server-two.vercel.app/singleFood/${id}`)
             .then(res => res.json())
             .then(data => {
                 setFod(data);
@@ -31,14 +31,14 @@ const SingleProductDetails = () => {
         const date = form.date.value;
         const notes = form.notes.value;
         const email = user.email;
-        const donar=form.donateP.value
-        const dname=form.donarName.value
-        const status=form.status.value
+        const donar = form.donateP.value
+        const dname = form.donarName.value
+        const status = form.status.value
 
-        const newDonate = { photo, name, location, quantity, date, notes, email,donar,dname,status }
+        const newDonate = { photo, name, location, quantity, date, notes, email, donar, dname, status }
 
-    console.log(newDonate)
-    console.log(e.target.value)
+        console.log(newDonate)
+        console.log(e.target.value)
     }
 
     return (
@@ -82,9 +82,9 @@ const SingleProductDetails = () => {
                         </div>
                     </div>
                     <div className="text-center">
-                     <NavLink to={`/requestPage/${fod._id}`}>
-                     <button onClick={handleRequest} className="btn btn-accent">Request</button>
-                     </NavLink>
+                        <NavLink to={`/requestPage/${fod._id}`}>
+                            <button onClick={handleRequest} className="btn btn-accent">Request</button>
+                        </NavLink>
                     </div>
                 </div>
             </div>

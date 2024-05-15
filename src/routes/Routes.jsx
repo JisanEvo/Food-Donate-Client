@@ -13,66 +13,66 @@ import RequestPage from "../components/RequestPage";
 import MyReq from "../components/MyReq";
 import PrivateRoute from "./PrivateRoute";
 
-const router=createBrowserRouter([
+const router = createBrowserRouter([
     {
-        path:'/',
-        element:<Main></Main>,
-        errorElement:<ErrorPage></ErrorPage>,
-        children:[
+        path: '/',
+        element: <Main></Main>,
+        errorElement: <ErrorPage></ErrorPage>,
+        children: [
             {
-                index:true,
-                element:<Home></Home>,
-                loader:()=>fetch(`http://localhost:5000/food`),
+                index: true,
+                element: <Home></Home>,
+                loader: () => fetch(`https://food-donate-server-two.vercel.app/food`),
 
             },
             {
-                path:'/login',
-                element:<Login></Login>
+                path: '/login',
+                element: <Login></Login>
             },
             {
-                path:'/register',
-                element:<Register></Register>
+                path: '/register',
+                element: <Register></Register>
             },
             {
-                path:'/availableFood',
+                path: '/availableFood',
                 element:
 
-<AvailableFood></AvailableFood>,
+                    <AvailableFood></AvailableFood>,
 
-                loader:()=>fetch(`http://localhost:5000/food`),
+                loader: () => fetch(`https://food-donate-server-two.vercel.app/food`),
             },
             {
-                path:'/addFood',
-                element:<PrivateRoute>
+                path: '/addFood',
+                element: <PrivateRoute>
                     <AddFood></AddFood>
                 </PrivateRoute>
             },
             {
-                path:'/manageFood',
-                element:<PrivateRoute>
+                path: '/manageFood',
+                element: <PrivateRoute>
                     <ManageFood></ManageFood>
                 </PrivateRoute>
             },
             {
-                path:'/singleFood/:id',
-                element:<PrivateRoute>
+                path: '/singleFood/:id',
+                element: <PrivateRoute>
                     <SingleProductDetails></SingleProductDetails>
                 </PrivateRoute>
             },
             {
-                path:'/updateFood/:id',
-                element:<UpdateFood></UpdateFood>,
-                loader:({params})=>fetch(`http://localhost:5000/updateFood/${params.id}`)
+                path: '/updateFood/:id',
+                element: <UpdateFood></UpdateFood>,
+                loader: ({ params }) => fetch(`https://food-donate-server-two.vercel.app/updateFood/${params.id}`)
             },
             {
-                path:'/requestPage/:id',
-                element:  <RequestPage></RequestPage> ,
-                loader:({params})=>fetch(`http://localhost:5000/updateFood/${params.id}`)
+                path: '/requestPage/:id',
+                element: <RequestPage></RequestPage>,
+                loader: ({ params }) => fetch(`https://food-donate-server-two.vercel.app/updateFood/${params.id}`)
 
             },
             {
-                path:'/req',
-                element:<PrivateRoute>
+                path: '/req',
+                element: <PrivateRoute>
                     <MyReq></MyReq>
                 </PrivateRoute>
 

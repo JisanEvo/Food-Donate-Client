@@ -1,19 +1,19 @@
 import { useContext, useEffect, useState } from "react";
-import {  useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
 
 
 const RequestPage = () => {
     const update = useLoaderData();
-    const {user}=useContext(AuthContext)
+    const { user } = useContext(AuthContext)
 
 
     const [items, setItems] = useState([]);
     const [control, setControl] = useState(false)
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/manageFood/${user.email}`)
+            fetch(`https://food-donate-server-two.vercel.app/manageFood/${user.email}`)
                 .then(res => res.json())
                 .then(data => {
                     setItems(data);
@@ -29,7 +29,7 @@ const RequestPage = () => {
 
 
         event.preventDefault();
-       
+
 
         const form = event.target;
         const name = form.name.value;
@@ -43,33 +43,33 @@ const RequestPage = () => {
         const dname = form.donarName.value
 
         const reqData = { photo, name, location, quantity, date, notes, email, donar, dname }
-        fetch("http://localhost:5000/req", {
+        fetch("https://food-donate-server-two.vercel.app/req", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(reqData)
         })
-    .then(res=>res.json())
-    .then(data=>{
-        if(data.insertedId){
-            Swal.fire({
-                icon: "success",
-                title: "Great",
-                text: "Requested Succesfully",
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    Swal.fire({
+                        icon: "success",
+                        title: "Great",
+                        text: "Requested Succesfully",
 
-              });
+                    });
 
 
 
-        }
-       else{
-        Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Something went wrong!",
+                }
+                else {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "Something went wrong!",
 
-          });
-       }
-    })
+                    });
+                }
+            })
 
 
 
@@ -79,18 +79,18 @@ const RequestPage = () => {
     return (
 
         <div>
-    <div className="p-4	">
+            <div className="p-4	">
                 <form onSubmit={handleUpdate}>
 
                     <div className="flex mb-8">
                         <div className="ml-4 w-1/2 ">
                             <h4>Food  Name: </h4>
-                            <input type="text" name="name" placeholder="Food Name " className="input input-bordered w-full" defaultValue={update.name} readOnly/>
+                            <input type="text" name="name" placeholder="Food Name " className="input input-bordered w-full" defaultValue={update.name} readOnly />
                         </div>
                         <div className=" ml-4  w-1/2">
 
                             <h4>Food Photo:</h4>
-                            <input type="text" name="photo" placeholder="Food Photo " className="input input-bordered w-full" defaultValue={update.photo} readOnly/>
+                            <input type="text" name="photo" placeholder="Food Photo " className="input input-bordered w-full" defaultValue={update.photo} readOnly />
                         </div>
 
                     </div>
@@ -112,7 +112,7 @@ const RequestPage = () => {
                         </div>
                         <div className=" ml-4 w-1/2">
                             <h4>Additional Notes:</h4>
-                            <input type="text" name="notes" placeholder="Additional Notes" className="input input-bordered w-full" defaultValue={update.notes} required/>
+                            <input type="text" name="notes" placeholder="Additional Notes" className="input input-bordered w-full" defaultValue={update.notes} required />
                         </div>
                     </div>
                     <div className="flex mb-8">
@@ -122,7 +122,7 @@ const RequestPage = () => {
                         </div>
                         <div className=" ml-4 w-1/2">
                             <h4> User Name:</h4>
-                            <input type="text" name="donarName" placeholder="User Name" defaultValue={user?.displayName} className="input input-bordered w-full"/>
+                            <input type="text" name="donarName" placeholder="User Name" defaultValue={user?.displayName} className="input input-bordered w-full" />
                         </div>
                     </div>
 

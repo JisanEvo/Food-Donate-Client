@@ -8,7 +8,7 @@
 
 //     useEffect(() => {
 //         if (user) {
-//             fetch(`http://localhost:5000/req/${user?.email}`)
+//             fetch(`https://food-donate-server-two.vercel.app/req/${user?.email}`)
 //                 .then(res => res.json())
 //                 .then(data => {
 //                     setItems(data);
@@ -39,7 +39,7 @@ const MyReq = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/req/${user?.email}`)
+            fetch(`https://food-donate-server-two.vercel.app/req/${user?.email}`)
                 .then(res => {
                     if (!res.ok) {
                         throw new Error('Failed to fetch data');
@@ -119,7 +119,7 @@ const MyReq = () => {
                                             </td>
                                             <td className=" px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
                                                 <div className=" hidden  sm:block">
-                                                {item.notes.substring(0, 20)}
+                                                    {item.notes.substring(0, 20)}
                                                 </div>
                                             </td>
                                             <td className="px-4 py-4 text-sm whitespace-nowrap">

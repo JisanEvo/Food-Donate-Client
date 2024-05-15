@@ -11,7 +11,7 @@ const ManageFood = () => {
     const [control, setControl] = useState(false)
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/manageFood/${user.email}`)
+            fetch(`https://food-donate-server-two.vercel.app/manageFood/${user.email}`)
                 .then(res => res.json())
                 .then(data => {
                     setItems(data);
@@ -32,7 +32,7 @@ const ManageFood = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/delete/${id}`, {
+                fetch(`https://food-donate-server-two.vercel.app/delete/${id}`, {
                     method: "DELETE",
                 })
                     .then(res => res.json())
@@ -55,7 +55,7 @@ const ManageFood = () => {
 
     return (
         <div>
-       
+
             <div className="flex flex-col mt-6">
                 <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
@@ -70,9 +70,9 @@ const ManageFood = () => {
                                             Donator
                                         </th>
                                         <th scope="col" className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                                          <div className=" hidden  sm:block">
-                                          Email address
-                                          </div>
+                                            <div className=" hidden  sm:block">
+                                                Email address
+                                            </div>
                                         </th>
                                         <th scope="col" className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                             Edit
@@ -112,9 +112,9 @@ const ManageFood = () => {
                                                 {/* Render donator */}
                                             </td>
                                             <td className=" px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-                                             <div className=" hidden  sm:block">
-                                             {user.email}
-                                             </div>
+                                                <div className=" hidden  sm:block">
+                                                    {user.email}
+                                                </div>
                                             </td>
                                             <td className="px-4 py-4 text-sm whitespace-nowrap">
                                                 {/* Render edit options */}
