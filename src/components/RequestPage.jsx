@@ -57,8 +57,8 @@ const RequestPage = () => {
                 text: "Requested Succesfully",
 
               });
-             
 
+              history.push("/home");
 
         }
        else{
