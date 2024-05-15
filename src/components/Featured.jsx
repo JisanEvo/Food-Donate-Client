@@ -28,11 +28,7 @@ const Featured = ({ data }) => {
         className="text-2xl text-center mt-2">Food donation reminds us that abundance is best enjoyed when it is shared with those in need.</motion.div>
 
       <motion.div
-      //  variants={fadeIn('up',0.4)}
-      //  initial="hidden"
-      //  whileInView={'show'}
-      //    viewport={{once:false,amount:0.5}}
-
+    
       className="grid grid-cols-1 lg:grid-cols-3 gap-4 m-4">
         {
           data

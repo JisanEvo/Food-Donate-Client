@@ -82,7 +82,7 @@ const MyReq = () => {
                                                 Email address
                                             </div>
                                         </th>
-                                      
+
                                     </tr>
                                 </thead>
                                 <tbody className="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
@@ -119,7 +119,7 @@ const MyReq = () => {
                                             </td>
                                             <td className=" px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
                                                 <div className=" hidden  sm:block">
-                                                    {user.email}
+                                                {item.notes.substring(0, 20)}
                                                 </div>
                                             </td>
                                             <td className="px-4 py-4 text-sm whitespace-nowrap">

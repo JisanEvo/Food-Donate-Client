@@ -8,7 +8,7 @@ import Donar from "../components/Donar";
 
 const Home = () => {
 const data=useLoaderData()
-console.log(data)
+// console.log(data)
     return (
         <div>
             <Carousel></Carousel>

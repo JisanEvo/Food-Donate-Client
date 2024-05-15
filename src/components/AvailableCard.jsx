@@ -6,8 +6,7 @@ import { Link } from "react-router-dom";
 
 
 const AvailableCard = ({ fd }) => {
-    // const {user}=useContext(AuthContext)
-    // console.log(fd)
+  
     return (
         <div className="mx-auto container ">
             <div className="">
@@ -16,7 +15,7 @@ const AvailableCard = ({ fd }) => {
 
                     <div className="p-6">
                         <div>
-                            
+
                             <div className="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 " tabIndex="0" >{fd.name}</div>
                             <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{fd.foodStatus}</p>
                             <div className="flex justify-between">
