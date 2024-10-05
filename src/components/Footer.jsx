@@ -1,18 +1,18 @@
 const Footer = () => {
     return (
-      <footer className='bg-[#f7fee7] shadow-sm mt-12'>
+      <footer className='bg-orange-400 shadow-sm mt-12'>
         <hr />
         <div className='container px-6 py-8 mx-auto'>
           <div className='flex flex-col items-center text-center'>
             <div className='flex gap-2 items-center'>
               <img className='w-auto h-7' src='https://i.postimg.cc/qMpBP5Zd/food-and-groceries-donation-illustration-free-vector.jpg' alt='' />
-              <span className="text-xl font-bold">Hungry's</span>
+              <span className="text-xl font-bold text-white">Hungry'<span className="text-red-500">S</span></span>
             </div>
 
-            <div className='flex flex-wrap justify-center mt-6 -mx-4'>
+            <div className='flex flex-wrap justify-center mt-6 -mx-4 text-white '>
               <a
                 href='#'
-                className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 '
+                className='mx-4 text-sm text-white transition-colors duration-300 hover:text-blue-500 '
                 aria-label='Reddit'
               >
                 {' '}
@@ -21,7 +21,7 @@ const Footer = () => {
 
               <a
                 href='#'
-                className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 '
+                className='mx-4 text-sm text-white  transition-colors duration-300 hover:text-blue-500 '
                 aria-label='Reddit'
               >
                 {' '}
@@ -30,7 +30,7 @@ const Footer = () => {
 
               <a
                 href='#'
-                className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 '
+                className='mx-4 text-sm text-white  transition-colors duration-300 hover:text-blue-500 '
                 aria-label='Reddit'
               >
                 {' '}
@@ -39,7 +39,7 @@ const Footer = () => {
 
               <a
                 href='#'
-                className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 '
+                className='mx-4 text-sm text-white transition-colors duration-300 hover:text-blue-500 '
                 aria-label='Reddit'
               >
                 {' '}
@@ -48,7 +48,7 @@ const Footer = () => {
 
               <a
                 href='#'
-                className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 '
+                className='mx-4 text-sm text-white transition-colors duration-300 hover:text-blue-500 '
                 aria-label='Reddit'
               >
                 {' '}
@@ -60,8 +60,8 @@ const Footer = () => {
           <hr className='my-6 border-gray-200 md:my-10 ' />
 
           <div className='flex flex-col items-center sm:flex-row sm:justify-between'>
-            <p className='text-sm text-gray-500 '>
-              © Copyright 2021. All Rights Reserved.
+            <p className='text-sm text-white  '>
+              © Copyright 2025. All Rights Reserved. <span className="text-red-500 font-bold font-serif">Jisan</span>
             </p>
 
             <div className='flex -mx-2'>

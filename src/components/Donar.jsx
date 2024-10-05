@@ -14,7 +14,7 @@ Congratulations on winning the <span className="text-red-300 text-bols">Donar of
                     </p>
 
                     <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4">
-                        <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
+                        <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-red-500 dark:border-gray-700 dark:hover:border-transparent">
                             <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://i.postimg.cc/DZdH0ymw/326430646-3333968393552145-3576640222538820213-n.jpg" alt=""/>
 
                                 <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Jisan Mahmud</h1>
@@ -51,7 +51,7 @@ Congratulations on winning the <span className="text-red-300 text-bols">Donar of
                                 </div>
                         </div>
 
-                        <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
+                        <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-red-500  dark:border-gray-700 dark:hover:border-transparent">
                             <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://i.postimg.cc/Ls6VbgYS/download-1.jpg" alt=""/>
 
                                 <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Stylish Yash</h1>
@@ -88,7 +88,7 @@ Congratulations on winning the <span className="text-red-300 text-bols">Donar of
                                 </div>
                         </div>
 
-                        <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
+                        <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-red-500  dark:border-gray-700 dark:hover:border-transparent">
                             <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://i.postimg.cc/VLs10QYG/download-2.jpg" alt=""/>
 
                                 <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Tabu </h1>
@@ -114,7 +114,7 @@ Congratulations on winning the <span className="text-red-300 text-bols">Donar of
                                         </svg>
                                     </a>
 
-                                    <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Github">
+                                    <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-white" aria-label="Github">
                                         <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -125,12 +125,12 @@ Congratulations on winning the <span className="text-red-300 text-bols">Donar of
                                 </div>
                         </div>
 
-                        <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
+                        <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-red-500 dark:border-gray-700 dark:hover:border-transparent">
                             <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://i.postimg.cc/q7HkSq3m/images-9.jpg" alt=""/>
 
                                 <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">Bappy</h1>
 
-                                <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Full stack developer</p>
+                                <p className="mt-2 text-gray-500 capitalize dark:text-white  group-hover:text-gray-300">Full stack developer</p>
 
                                 <div className="flex mt-3 -mx-2">
                                     <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">

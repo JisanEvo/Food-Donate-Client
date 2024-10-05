@@ -42,6 +42,7 @@ const CardShow = ({ item }) => {
                         <div className="mt-4 text-center">
                             <Link to={`/singleFood/${item._id}`} >
                                 <button className="btn btn-info text-white">Details</button>
+                                
                             </Link>
                         </div>
                     </div>
