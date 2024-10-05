@@ -10,7 +10,7 @@ const SingleProductDetails = () => {
     const [isOpen, setIsOpen] = useState(false); // State for modal visibility
     const { user } = useContext(AuthContext)
     useEffect(() => {
-        fetch(`https://food-donate-server-two.vercel.app/singleFood/${id}`)
+        fetch(`https://food-donate-server-mvl63ozb7-develops-hunt.vercel.app/singleFood/${id}`)
             .then(res => res.json())
             .then(data => {
                 setFod(data);

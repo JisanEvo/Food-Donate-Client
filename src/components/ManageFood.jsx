@@ -11,7 +11,7 @@ const ManageFood = () => {
     const [control, setControl] = useState(false)
     useEffect(() => {
         if (user) {
-            fetch(`https://food-donate-server-two.vercel.app/manageFood/${user.email}`)
+            fetch(`https://food-donate-server-mvl63ozb7-develops-hunt.vercel.app/manageFood/${user.email}`)
                 .then(res => res.json())
                 .then(data => {
                     setItems(data);
@@ -32,7 +32,7 @@ const ManageFood = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://food-donate-server-two.vercel.app/delete/${id}`, {
+                fetch(`https://food-donate-server-mvl63ozb7-develops-hunt.vercel.app/delete/${id}`, {
                     method: "DELETE",
                 })
                     .then(res => res.json())

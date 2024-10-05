@@ -12,6 +12,7 @@
   "dependencies": {
     "firebase": "^10.11.1",
     "framer-motion": "^11.2.0",
+    "google-map-react": "^2.2.1",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "navigate-ui": "^0.1.6",
