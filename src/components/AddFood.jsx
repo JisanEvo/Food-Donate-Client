@@ -25,7 +25,7 @@ const AddFood = () => {
 
         const newDonate = { photo, name, location, quantity, date, notes, email, donar, dname, status }
 
-        fetch("https://food-donate-server-mvl63ozb7-develops-hunt.vercel.app/addFood", {
+        fetch("https://food-donate-server-two.vercel.app/addFood", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(newDonate)
